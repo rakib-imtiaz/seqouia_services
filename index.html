@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequoia Service — Premium Security, Boats & Drones</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4494/4494471.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="logo">
+            <img src="./assets/images/logo.png" alt="Sequoia Logo">
+            <span>Sequoia Service</span>
+        </div>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <span class="hero-label">Premium Services</span>
+            <h1>Your Trusted Partner for Protection & Exploration</h1>
+            <p class="hero-subtitle">Premium security, luxury watercraft, and breath‑taking aerial visuals—delivered
+                with Sequoia excellence.</p>
+            <div class="cta-group">
+                <a href="#services" class="btn btn-primary">Explore Services</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2 data-aos="fade-up">Our Core Services</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Explore our range of premium services
+            tailored to meet your needs.</p>
+        <div class="card-grid">
+            <!-- Security Solutions -->
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <a href="https://sequoiasecurity.ca/" target="_blank" class="card-link">
+                    <img src="./assets/images/security_solution.png" alt="Security Services">
+                    <div class="card-body">
+                        <h3>Security Solutions</h3>
+                        <p>24/7 surveillance, risk assessment, and on‑site protection by certified professionals
+                            equipped
+                            with state‑of‑the‑art technology.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Boat Rentals -->
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <a href="https://sequoia-boat-rental.vercel.app/index.html" target="_blank" class="card-link">
+                    <img src="./assets/images/boat_image.png" alt="Luxury Boat Services">
+                    <div class="card-body">
+                        <h3>Boat Rentals</h3>
+                        <p>Charter premium vessels for leisure, events, or fishing—complete with expert crew, safety
+                            gear,
+                            and bespoke itineraries.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Drone Photography -->
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <a href="https://sequoiadrone.ca/" target="_blank" class="card-link">
+                    <img src="./assets/images/drone_image.png" alt="Drone Services">
+                    <div class="card-body">
+                        <h3>Drone Photography</h3>
+                        <p>Cinematic 4K aerial imagery and inspection services for real estate, events, and industrial
+                            projects—piloted by licensed operators.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 data-aos="fade-up">Get in Touch</h2>
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+            <h3>Sequoia Services Kamloops</h3>
+            <p>293 Arrowstone Drive</p>
+            <p>Kamloops, BC V2C1P8</p>
+            <p class="contact-person">Contact: RH Mahamud</p>
+            <p class="phone"><a href="tel:18773580441">1-877-358-0441</a></p>
+            <p class="email"><a href="mailto:contact@sequoiaservice.com">contact@sequoiaservice.com</a></p>
+        </div>
+        <a href="https://wa.me/18773580441" target="_blank" class="btn btn-whatsapp" data-aos="fade-up"
+            data-aos-delay="250">
+            Chat on WhatsApp
+        </a>
+        <p data-aos="fade-up" data-aos-delay="300">© 2025 Sequoia Service — All rights reserved.</p>
+    </section>
+
+    <!-- AOS & INTERACTIVITY SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+
+        // Header background change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile nav toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
