@@ -7,7 +7,7 @@
     <title>Sequoia Service — Premium Security, Boats & Drones</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4494/4494471.png">
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -117,9 +117,9 @@
 
                         <div class="contact-details">
                             <div class="contact-item">
-                                <i class="contact-icon">
+                                <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" alt="Location">
-                                </i>
+                                </div>
                                 <div>
                                     <p>293 Arrowstone Drive</p>
                                     <p>Kamloops, BC V2C1P8</p>
@@ -127,25 +127,25 @@
                             </div>
 
                             <div class="contact-item">
-                                <i class="contact-icon">
+                                <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="Person">
-                                </i>
+                                </div>
                                 <p class="contact-person">RH Mahamud</p>
                             </div>
 
                             <div class="contact-item">
-                                <i class="contact-icon">
+                                <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" alt="Phone">
-                                </i>
+                                </div>
                                 <p class="phone"><a href="tel:18773580441">1-877-358-0441</a></p>
                             </div>
 
                             <div class="contact-item">
-                                <i class="contact-icon">
+                                <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/542/542638.png" alt="Email">
-                                </i>
+                                </div>
                                 <p class="email"><a
-                                        href="mailto:contact@sequoiaservice.com">contact@sequoiaservice.com</a></p>
+                                        href="mailto:sequoia@sequoiaservices.ca">sequoia@sequoiaservices.ca</a></p>
                             </div>
                         </div>
                     </div>
@@ -153,21 +153,20 @@
                     <div class="social-links reveal" data-aos="fade-up" data-aos-delay="200">
                         <a href="https://wa.me/18773580441" target="_blank" class="btn btn-whatsapp">
                             <div class="btn-icon">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="WhatsApp"
-                                    class="whatsapp-icon">
+                                <img src="./assets/images/whatsapp_icon.png" alt="WhatsApp" class="whatsapp-icon">
                             </div>
                             <span>Chat on WhatsApp</span>
                         </a>
 
                         <div class="other-socials">
                             <a href="#" class="social-icon" title="Facebook">
-                                <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook">
+                                <img src="./assets/images/fb_icon.png" alt="Facebook">
                             </a>
                             <a href="#" class="social-icon" title="Instagram">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram">
+                                <img src="./assets/images/insta_icon.png" alt="Instagram">
                             </a>
                             <a href="#" class="social-icon" title="LinkedIn">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn">
+                                <img src="./assets/images/linkedin_icon.png" alt="LinkedIn">
                             </a>
                         </div>
                     </div>
@@ -204,8 +203,20 @@
         // Mobile nav toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
+
         hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
             navMenu.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navMenu.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+            });
         });
 
         // Parallax scrolling effect
