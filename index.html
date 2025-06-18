@@ -36,10 +36,13 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero parallax" data-parallax="0.5">
+        <video class="video-background" autoplay muted loop playsinline>
+            <source src="./assets/videos/hero-video.mp4" type="video/mp4">
+        </video>
         <div class="hero-content" data-aos="fade-up">
             <span class="hero-label">Premium Services</span>
-            <h1>Your Trusted Partner for Protection & Exploration</h1>
+            <h1><span class="typewriter typewriter-light">Your Trusted Partner for Protection & Exploration</span></h1>
             <p class="hero-subtitle">Premium security, luxury watercraft, and breath‑taking aerial visuals—delivered
                 with Sequoia excellence.</p>
             <div class="cta-group">
@@ -47,17 +50,23 @@
                 <a href="#contact" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="mouse"></div>
+        </div>
         <div class="hero-overlay"></div>
     </section>
 
     <!-- SERVICES -->
     <section id="services">
-        <h2 data-aos="fade-up">Our Core Services</h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Explore our range of premium services
+        <h2 class="text-gradient reveal typewriter-container" data-aos="fade-up">
+            <span class="typewriter">Our Core Services</span>
+        </h2>
+        <p class="section-subtitle reveal" data-aos="fade-up" data-aos-delay="100">Explore our range of premium services
             tailored to meet your needs.</p>
         <div class="card-grid">
             <!-- Security Solutions -->
-            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card reveal" data-aos="zoom-in" data-aos-delay="100">
                 <a href="https://sequoiasecurity.ca/" target="_blank" class="card-link">
                     <img src="./assets/images/security_solution.png" alt="Security Services">
                     <div class="card-body">
@@ -69,7 +78,7 @@
                 </a>
             </div>
             <!-- Boat Rentals -->
-            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card reveal" data-aos="zoom-in" data-aos-delay="200">
                 <a href="https://sequoia-boat-rental.vercel.app/index.html" target="_blank" class="card-link">
                     <img src="./assets/images/boat_image.png" alt="Luxury Boat Services">
                     <div class="card-body">
@@ -81,7 +90,7 @@
                 </a>
             </div>
             <!-- Drone Photography -->
-            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card reveal" data-aos="zoom-in" data-aos-delay="300">
                 <a href="https://sequoiadrone.ca/" target="_blank" class="card-link">
                     <img src="./assets/images/drone_image.png" alt="Drone Services">
                     <div class="card-body">
@@ -96,26 +105,95 @@
 
     <!-- CONTACT -->
     <section id="contact">
-        <h2 data-aos="fade-up">Get in Touch</h2>
-        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
-            <h3>Sequoia Services Kamloops</h3>
-            <p>293 Arrowstone Drive</p>
-            <p>Kamloops, BC V2C1P8</p>
-            <p class="contact-person">Contact: RH Mahamud</p>
-            <p class="phone"><a href="tel:18773580441">1-877-358-0441</a></p>
-            <p class="email"><a href="mailto:contact@sequoiaservice.com">contact@sequoiaservice.com</a></p>
+        <div class="container">
+            <h2 class="reveal typewriter-container" data-aos="fade-up">
+                <span class="typewriter typewriter-light">Get in Touch</span>
+            </h2>
+
+            <div class="contact-section-inner">
+                <div class="contact-wrapper">
+                    <div class="contact-info reveal" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Sequoia Services Kamloops</h3>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="contact-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" alt="Location">
+                                </i>
+                                <div>
+                                    <p>293 Arrowstone Drive</p>
+                                    <p>Kamloops, BC V2C1P8</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="contact-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="Person">
+                                </i>
+                                <p class="contact-person">RH Mahamud</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="contact-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" alt="Phone">
+                                </i>
+                                <p class="phone"><a href="tel:18773580441">1-877-358-0441</a></p>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="contact-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/542/542638.png" alt="Email">
+                                </i>
+                                <p class="email"><a
+                                        href="mailto:contact@sequoiaservice.com">contact@sequoiaservice.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links reveal" data-aos="fade-up" data-aos-delay="200">
+                        <a href="https://wa.me/18773580441" target="_blank" class="btn btn-whatsapp">
+                            <div class="btn-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="WhatsApp"
+                                    class="whatsapp-icon">
+                            </div>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+
+                        <div class="other-socials">
+                            <a href="#" class="social-icon" title="Facebook">
+                                <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook">
+                            </a>
+                            <a href="#" class="social-icon" title="Instagram">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram">
+                            </a>
+                            <a href="#" class="social-icon" title="LinkedIn">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright reveal" data-aos="fade-up" data-aos-delay="300">© 2025 Sequoia Service — All rights
+                reserved.</p>
         </div>
-        <a href="https://wa.me/18773580441" target="_blank" class="btn btn-whatsapp" data-aos="fade-up"
-            data-aos-delay="250">
-            Chat on WhatsApp
-        </a>
-        <p data-aos="fade-up" data-aos-delay="300">© 2025 Sequoia Service — All rights reserved.</p>
     </section>
+
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Page transition -->
+    <div class="page-transition"></div>
 
     <!-- AOS & INTERACTIVITY SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true, duration: 800 });
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            delay: 100
+        });
 
         // Header background change on scroll
         const header = document.getElementById('header');
@@ -128,6 +206,148 @@
         const navMenu = document.getElementById('navMenu');
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('open');
+        });
+
+        // Parallax scrolling effect
+        const parallaxSections = document.querySelectorAll('.parallax');
+        window.addEventListener('scroll', () => {
+            parallaxSections.forEach(section => {
+                const speed = parseFloat(section.dataset.parallax) || 0.5;
+                section.style.backgroundPositionY = `${-(window.scrollY * speed)}px`;
+            });
+        });
+
+        // Enhanced card hover effects
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                }, 100);
+            });
+
+            card.addEventListener('mouseenter', () => {
+                card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('open')) {
+                        navMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+
+        // Custom cursor
+        const cursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+
+            if (!cursor.classList.contains('active')) {
+                setTimeout(() => {
+                    cursor.classList.add('active');
+                }, 100);
+            }
+        });
+
+        document.addEventListener('mouseout', () => {
+            cursor.classList.remove('active');
+        });
+
+        // Add hover effect to interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .card, .btn');
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        });
+
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+
+        function checkReveal() {
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkReveal);
+        checkReveal(); // Check on page load
+
+        // Advanced typewriter effect with intersection observer
+        const typewriterElements = document.querySelectorAll('.typewriter');
+
+        // Create intersection observer to trigger typewriter when visible
+        const typewriterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Reset the animation by removing and adding the class
+                    const element = entry.target;
+                    element.style.animation = 'none';
+                    element.offsetHeight; // Trigger reflow
+
+                    // Determine which animation to apply based on element location
+                    let duration, steps;
+
+                    if (element.closest('#contact')) {
+                        duration = 2;
+                        steps = 20;
+                        element.style.animation = `typing ${duration}s steps(${steps}, end), blink-caret-light 0.75s step-end infinite`;
+                    } else if (element.closest('#services')) {
+                        duration = 2.5;
+                        steps = 30;
+                        element.style.animation = `typing ${duration}s steps(${steps}, end), blink-caret 0.75s step-end infinite`;
+                    } else {
+                        duration = 3.5;
+                        steps = 40;
+                        element.style.animation = `typing ${duration}s steps(${steps}, end), blink-caret-light 0.75s step-end infinite`;
+                    }
+
+                    // Add the typing-done class after animation completes
+                    setTimeout(() => {
+                        element.classList.add('typing-done');
+                    }, duration * 1000);
+
+                    // Unobserve after triggering once
+                    typewriterObserver.unobserve(element);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        // Observe all typewriter elements
+        typewriterElements.forEach(element => {
+            typewriterObserver.observe(element);
         });
     </script>
 </body>
