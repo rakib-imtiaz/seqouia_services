@@ -573,7 +573,7 @@ header.scrolled .hamburger span {
     text-align: left;
 }
 
-.contact-item .contact-icon {
+.contact-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -587,16 +587,17 @@ header.scrolled .hamburger span {
     overflow: hidden;
 }
 
-.contact-item:hover .contact-icon {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
 .contact-icon img {
     width: 20px;
     height: 20px;
     object-fit: contain;
     filter: brightness(0) invert(1);
+}
+
+.contact-item:hover .contact-icon {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-item p {
@@ -630,9 +631,8 @@ header.scrolled .hamburger span {
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    flex-shrink: 0;
     transition: all 0.3s ease;
-    padding: 0;
-    overflow: hidden;
 }
 
 .social-icon img {
@@ -643,9 +643,9 @@ header.scrolled .hamburger span {
 }
 
 .social-icon:hover {
-    transform: translateY(-3px);
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .copyright {
@@ -963,4 +963,57 @@ section {
     .contact-section-inner {
         padding: 4rem;
     }
+}
+
+/* Contact Icons */
+.contact-icon,
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-icon img,
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.contact-item:hover .contact-icon,
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* WhatsApp Button Icon */
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-right: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
