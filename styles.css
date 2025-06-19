@@ -181,6 +181,7 @@ header.scrolled .hamburger span {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        z-index: 1100;
     }
 
     nav ul {
@@ -195,13 +196,15 @@ header.scrolled .hamburger span {
         right: -100%;
         width: 75%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(14, 165, 233, 0.95);
         backdrop-filter: blur(10px);
         padding-top: 6rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         z-index: 1000;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     #navMenu.open {
@@ -211,10 +214,22 @@ header.scrolled .hamburger span {
     nav a {
         font-size: 1.2rem;
         color: #ffffff;
+        position: relative;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
 
     header.scrolled nav a {
         color: #ffffff;
+    }
+
+    .hamburger.open span {
+        background: #ffffff;
     }
 }
 
@@ -344,10 +359,10 @@ header.scrolled .hamburger span {
 }
 
 .btn-whatsapp {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
     background: #25d366;
     color: #ffffff;
     padding: 0.75rem 1.5rem;
@@ -357,26 +372,39 @@ header.scrolled .hamburger span {
     box-shadow: 0 6px 15px rgba(37, 211, 102, 0.35);
     transition: all 0.3s ease;
     margin-bottom: 1rem;
-    width: auto;
+    width: fit-content;
     min-width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    margin-right: 0;
+    margin: 0;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .whatsapp-icon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
+}
+
+.btn-whatsapp span {
+    flex: 1;
+    text-align: center;
+    display: block;
+    line-height: 1.2;
+    padding-right: 8px;
 }
 
 .btn-whatsapp:hover {
@@ -410,7 +438,6 @@ header.scrolled .hamburger span {
     left: 0;
     right: 0;
     height: 200px;
-    background: linear-gradient(to bottom, transparent, var(--clr-gray-100));
     z-index: 1;
 }
 
@@ -626,6 +653,7 @@ header.scrolled .hamburger span {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-info:hover {
@@ -658,11 +686,21 @@ header.scrolled .hamburger span {
     margin-top: 2rem;
 }
 
+.contact-text {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     text-align: left;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .contact-icon {
@@ -695,6 +733,23 @@ header.scrolled .hamburger span {
 .contact-item p {
     margin: 0;
     font-size: 1.1rem;
+    max-width: calc(100% - 50px);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
+}
+
+.contact-item .email {
+    font-size: 0.95rem;
+}
+
+.contact-item .email a {
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .contact-person {
@@ -707,6 +762,7 @@ header.scrolled .hamburger span {
     gap: 1rem;
     width: 100%;
     align-items: center;
+    justify-content: center;
 }
 
 /* Social Icons */
@@ -749,6 +805,12 @@ header.scrolled .hamburger span {
     font-size: 0.95rem;
     opacity: 0.8;
     letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    line-height: 1.5;
+    padding: 0 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Parallax Utility */
@@ -799,6 +861,21 @@ header.scrolled .hamburger span {
     height: 50px;
     background-color: rgba(14, 165, 233, 0.1);
     border-width: 1px;
+}
+
+/* Add cursor style for hamburger */
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger.open {
+    cursor: pointer;
+}
+
+/* Ensure cursor is visible over mobile menu */
+#navMenu.open~.custom-cursor {
+    opacity: 0.8;
+    border-color: #ffffff;
 }
 
 /* Page Transitions */
@@ -1023,6 +1100,7 @@ header.scrolled .hamburger span {
     width: min(92%, 1200px);
     margin-inline: auto;
     padding: 0 15px;
+    box-sizing: border-box;
 }
 
 section {
@@ -1044,6 +1122,8 @@ section {
     position: relative;
     overflow: hidden;
     margin-top: 2rem;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .contact-section-inner::before {
@@ -1119,16 +1199,18 @@ section {
     .btn-whatsapp {
         padding: 0.75rem 2rem;
         font-size: 1.1rem;
+        gap: 0.75rem;
     }
 
     .btn-icon {
-        width: 38px;
-        height: 38px;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
     }
 
     .whatsapp-icon {
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
     }
 }
 
@@ -1144,4 +1226,134 @@ section {
 /* Prevent body scroll when mobile menu is open */
 body.no-scroll {
     overflow: hidden;
+}
+
+.custom-cursor.menu-open {
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
+    border-color: #ffffff;
+    border-width: 2px;
+    mix-blend-mode: difference;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        font-size: 0.85rem;
+        padding: 0 2rem;
+    }
+
+    /* Improved mobile navigation */
+    #navMenu {
+        padding-top: 8rem;
+    }
+
+    nav ul {
+        gap: 2rem;
+        width: 80%;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    /* Hamburger improvements */
+    .hamburger {
+        width: 35px;
+        height: 35px;
+        background-color: rgba(14, 165, 233, 0.2);
+        border-radius: 50%;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger.open {
+        background-color: transparent;
+    }
+
+    .hamburger span {
+        width: 24px;
+    }
+
+    .contact-item {
+        flex-wrap: wrap;
+    }
+
+    .contact-item p {
+        font-size: 1rem;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .contact-item .email {
+        font-size: 0.85rem;
+    }
+
+    .contact-info {
+        padding: 1.2rem;
+    }
+
+    .contact-details {
+        gap: 1.5rem;
+    }
+
+    .contact-section-inner {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Adjust the layout for mobile */
+@media (max-width: 480px) {
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-item p {
+        max-width: 100%;
+    }
+
+    .contact-icon {
+        margin-bottom: 0.25rem;
+    }
+
+    .contact-item .email a {
+        font-size: 0.8rem;
+        letter-spacing: -0.02em;
+    }
+
+    .contact-wrapper {
+        gap: 1.5rem;
+    }
+
+    .contact-text {
+        width: 100%;
+    }
+
+    .btn-whatsapp {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.95rem;
+        gap: 0.4rem;
+    }
+
+    .btn-icon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+
+    .whatsapp-icon {
+        width: 14px;
+        height: 14px;
+    }
 }

@@ -42,7 +42,7 @@
         </video>
         <div class="hero-content" data-aos="fade-up">
             <span class="hero-label">Premium Services</span>
-            <h1><span class="typewriter typewriter-light">Your Trusted Partner for Protection & Exploration</span></h1>
+            <h1><span class="typewriter typewriter-light">Your Trusted Partner</span></h1>
             <p class="hero-subtitle">Premium security, luxury watercraft, and breath‑taking aerial visuals—delivered
                 with Sequoia excellence.</p>
             <div class="cta-group">
@@ -59,14 +59,14 @@
 
     <!-- SERVICES -->
     <section id="services">
-        <h2 class="text-gradient reveal typewriter-container" data-aos="fade-up">
+        <h2 class="text-gradient typewriter-container" data-aos="fade-up">
             <span class="typewriter">Our Core Services</span>
         </h2>
-        <p class="section-subtitle reveal" data-aos="fade-up" data-aos-delay="100">Explore our range of premium services
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Explore our range of premium services
             tailored to meet your needs.</p>
         <div class="card-grid">
             <!-- Security Solutions -->
-            <div class="card reveal" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
                 <a href="https://sequoiasecurity.ca/" target="_blank" class="card-link">
                     <img src="./assets/images/security_solution.png" alt="Security Services">
                     <div class="card-body">
@@ -78,7 +78,7 @@
                 </a>
             </div>
             <!-- Boat Rentals -->
-            <div class="card reveal" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
                 <a href="https://sequoia-boat-rental.vercel.app/index.html" target="_blank" class="card-link">
                     <img src="./assets/images/boat_image.png" alt="Luxury Boat Services">
                     <div class="card-body">
@@ -90,7 +90,7 @@
                 </a>
             </div>
             <!-- Drone Photography -->
-            <div class="card reveal" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
                 <a href="https://sequoiadrone.ca/" target="_blank" class="card-link">
                     <img src="./assets/images/drone_image.png" alt="Drone Services">
                     <div class="card-body">
@@ -106,13 +106,13 @@
     <!-- CONTACT -->
     <section id="contact">
         <div class="container">
-            <h2 class="reveal typewriter-container" data-aos="fade-up">
+            <h2 class="typewriter-container" data-aos="fade-up">
                 <span class="typewriter typewriter-light">Get in Touch</span>
             </h2>
 
             <div class="contact-section-inner">
                 <div class="contact-wrapper">
-                    <div class="contact-info reveal" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
                         <h3>Sequoia Services Kamloops</h3>
 
                         <div class="contact-details">
@@ -120,7 +120,7 @@
                                 <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" alt="Location">
                                 </div>
-                                <div>
+                                <div class="contact-text">
                                     <p>293 Arrowstone Drive</p>
                                     <p>Kamloops, BC V2C1P8</p>
                                 </div>
@@ -130,30 +130,38 @@
                                 <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="Person">
                                 </div>
-                                <p class="contact-person">RH Mahamud</p>
+                                <div class="contact-text">
+                                    <p class="contact-person">RH Mahamud</p>
+                                </div>
                             </div>
 
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" alt="Phone">
                                 </div>
-                                <p class="phone"><a href="tel:18773580441">1-877-358-0441</a></p>
+                                <div class="contact-text">
+                                    <p class="phone"><a href="tel:18773580441">1-877-358-0441</a></p>
+                                </div>
                             </div>
 
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <img src="https://cdn-icons-png.flaticon.com/128/542/542638.png" alt="Email">
                                 </div>
-                                <p class="email"><a
-                                        href="mailto:sequoia@sequoiaservices.ca">sequoia@sequoiaservices.ca</a></p>
+                                <div class="contact-text">
+                                    <p class="email">
+                                        <a href="mailto:sequoia@sequoiaservices.ca">sequoia@sequoiaservices.ca</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="social-links reveal" data-aos="fade-up" data-aos-delay="200">
+                    <div class="social-links" data-aos="fade-up" data-aos-delay="200">
                         <a href="https://wa.me/18773580441" target="_blank" class="btn btn-whatsapp">
                             <div class="btn-icon">
-                                <img src="./assets/images/whatsapp_icon.png" alt="WhatsApp" class="whatsapp-icon">
+                                <img src="https://icongr.am/fontawesome/whatsapp.svg?size=24&color=ffffff"
+                                    alt="WhatsApp" class="whatsapp-icon">
                             </div>
                             <span>Chat on WhatsApp</span>
                         </a>
@@ -173,7 +181,7 @@
                 </div>
             </div>
 
-            <p class="copyright reveal" data-aos="fade-up" data-aos-delay="300">© 2025 Sequoia Service — All rights
+            <p class="copyright" data-aos="fade-up" data-aos-delay="300">© 2025 Sequoia Service — All rights
                 reserved.</p>
         </div>
     </section>
@@ -208,6 +216,13 @@
             hamburger.classList.toggle('open');
             navMenu.classList.toggle('open');
             document.body.classList.toggle('no-scroll');
+
+            // Update cursor state when menu is opened/closed
+            if (navMenu.classList.contains('open')) {
+                cursor.classList.add('menu-open');
+            } else {
+                cursor.classList.remove('menu-open');
+            }
         });
 
         // Close mobile menu when clicking on a nav link
@@ -216,6 +231,7 @@
                 hamburger.classList.remove('open');
                 navMenu.classList.remove('open');
                 document.body.classList.remove('no-scroll');
+                cursor.classList.remove('menu-open');
             });
         });
 
@@ -285,7 +301,7 @@
         });
 
         // Add hover effect to interactive elements
-        const interactiveElements = document.querySelectorAll('a, button, .card, .btn');
+        const interactiveElements = document.querySelectorAll('a, button, .card, .btn, .hamburger, #navMenu a');
 
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
@@ -330,16 +346,16 @@
                     let duration, steps;
 
                     if (element.closest('#contact')) {
-                        duration = 2;
-                        steps = 20;
+                        duration = 1.5;
+                        steps = 15;
                         element.style.animation = `typing ${duration}s steps(${steps}, end), blink-caret-light 0.75s step-end infinite`;
                     } else if (element.closest('#services')) {
-                        duration = 2.5;
-                        steps = 30;
+                        duration = 1.5;
+                        steps = 15;
                         element.style.animation = `typing ${duration}s steps(${steps}, end), blink-caret 0.75s step-end infinite`;
                     } else {
-                        duration = 3.5;
-                        steps = 40;
+                        duration = 1.5;
+                        steps = 15;
                         element.style.animation = `typing ${duration}s steps(${steps}, end), blink-caret-light 0.75s step-end infinite`;
                     }
 
@@ -353,7 +369,7 @@
                 }
             });
         }, {
-            threshold: 0.5
+            threshold: 0.1
         });
 
         // Observe all typewriter elements
