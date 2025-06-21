@@ -11,8 +11,9 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
@@ -24,8 +25,8 @@
         </div>
         <nav id="navMenu">
             <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services"><i class="fa-solid fa-gears"></i> Services</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
             </ul>
         </nav>
         <div class="hamburger" id="hamburger">
@@ -58,131 +59,117 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services">
-        <h2 class="text-gradient typewriter-container" data-aos="fade-up">
-            <span class="typewriter">Our Core Services</span>
-        </h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Explore our range of premium services
-            tailored to meet your needs.</p>
-        <div class="card-grid">
-            <!-- Security Solutions -->
-            <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                <a href="https://sequoiasecurity.ca/" target="_blank" class="card-link">
-                    <img src="./assets/images/security_solution.png" alt="Security Services">
-                    <div class="card-body">
-                        <h3>Security Solutions</h3>
-                        <p>24/7 surveillance, risk assessment, and on‑site protection by certified professionals
-                            equipped
-                            with state‑of‑the‑art technology.</p>
+    <section id="services" class="full-page-section"
+        style="background-image: url('./assets/images/our_service_section_bg.png');">
+        <div class="services-overlay"></div>
+        <div class="container">
+            <div class="section-content">
+                <h2 class="text-gradient typewriter-container" data-aos="fade-up">
+                    <span class="typewriter">Our Core Services</span>
+                </h2>
+                <div class="bento-grid">
+                    <div class="bento-item" style="background-image: url('./assets/images/security_solution.png');">
+                        <div class="bento-content">
+                            <h3>Security Solutions</h3>
+                            <p>24/7 surveillance, risk assessment, and on-site protection by certified professionals
+                                equipped
+                                with state-of-the-art technology.</p>
+                            <a href="#" class="learn-more">Learn More →</a>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <!-- Boat Rentals -->
-            <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                <a href="https://sequoia-boat-rental.vercel.app/index.html" target="_blank" class="card-link">
-                    <img src="./assets/images/boat_image.png" alt="Luxury Boat Services">
-                    <div class="card-body">
-                        <h3>Boat Rentals</h3>
-                        <p>Charter premium vessels for leisure, events, or fishing—complete with expert crew, safety
-                            gear,
-                            and bespoke itineraries.</p>
+                    <div class="bento-item" style="background-image: url('./assets/images/boat_image.png');">
+                        <div class="bento-content">
+                            <h3>Boat Rentals</h3>
+                            <p>Charter premium vessels for leisure, events, or fishing.</p>
+                            <a href="#" class="learn-more">Learn More →</a>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <!-- Drone Photography -->
-            <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                <a href="https://sequoiadrone.ca/" target="_blank" class="card-link">
-                    <img src="./assets/images/drone_image.png" alt="Drone Services">
-                    <div class="card-body">
-                        <h3>Drone Photography</h3>
-                        <p>Cinematic 4K aerial imagery and inspection services for real estate, events, and industrial
-                            projects—piloted by licensed operators.</p>
+                    <div class="bento-item" style="background-image: url('./assets/images/drone_image.png');">
+                        <div class="bento-content">
+                            <h3>Drone Photography</h3>
+                            <p>Cinematic 4K aerial imagery and inspection services.</p>
+                            <a href="#" class="learn-more">Learn More →</a>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="forest-parallax">
+        <div class="contact-overlay"></div>
         <div class="container">
-            <h2 class="typewriter-container" data-aos="fade-up">
-                <span class="typewriter typewriter-light">Get in Touch</span>
-            </h2>
+            <div class="section-content">
+                <h2 class="typewriter-container" data-aos="fade-up">
+                    <span class="typewriter typewriter-light">Get in Touch</span>
+                </h2>
 
-            <div class="contact-section-inner">
-                <div class="contact-wrapper">
-                    <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Sequoia Services Kamloops</h3>
+                <div class="contact-glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-wrapper">
+                        <div class="contact-info">
+                            <h3>Sequoia Services Kamloops</h3>
 
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" alt="Location">
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <p>Arrowstone Drive</p>
+                                        <p>Kamloops, BC V2C1P8</p>
+                                    </div>
                                 </div>
-                                <div class="contact-text">
-                                    <p>293 Arrowstone Drive</p>
-                                    <p>Kamloops, BC V2C1P8</p>
-                                </div>
-                            </div>
 
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="Person">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <p class="phone"><a href="tel:2508796055">250-879-6055</a></p>
+                                    </div>
                                 </div>
-                                <div class="contact-text">
-                                    <p class="contact-person">RH Mahamud</p>
-                                </div>
-                            </div>
 
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" alt="Phone">
-                                </div>
-                                <div class="contact-text">
-                                    <p class="phone"><a href="tel:18773580441">1-877-358-0441</a></p>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/542/542638.png" alt="Email">
-                                </div>
-                                <div class="contact-text">
-                                    <p class="email">
-                                        <a href="mailto:sequoia@sequoiaservices.ca">sequoia@sequoiaservices.ca</a>
-                                    </p>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <p class="email">
+                                            <a href="mailto:Info@sequoiaservices.ca">Info@sequoiaservices.ca</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                        <a href="https://wa.me/18773580441" target="_blank" class="btn btn-whatsapp">
-                            <div class="btn-icon">
-                                <img src="https://icongr.am/fontawesome/whatsapp.svg?size=24&color=ffffff"
-                                    alt="WhatsApp" class="whatsapp-icon">
+                        <div class="social-links">
+                            <a href="https://wa.me/2508796055" target="_blank" class="btn btn-whatsapp">
+                                <div class="btn-icon">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <span>Chat on WhatsApp</span>
+                            </a>
+
+                            <div class="other-socials">
+                                <a href="#" class="social-icon" title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
                             </div>
-                            <span>Chat on WhatsApp</span>
-                        </a>
-
-                        <div class="other-socials">
-                            <a href="#" class="social-icon" title="Facebook">
-                                <img src="./assets/images/fb_icon.png" alt="Facebook">
-                            </a>
-                            <a href="#" class="social-icon" title="Instagram">
-                                <img src="./assets/images/insta_icon.png" alt="Instagram">
-                            </a>
-                            <a href="#" class="social-icon" title="LinkedIn">
-                                <img src="./assets/images/linkedin_icon.png" alt="LinkedIn">
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <p class="copyright" data-aos="fade-up" data-aos-delay="300">© 2025 Sequoia Service — All rights
-                reserved.</p>
+                <p class="copyright">Copyright &copy; <span id="currentYear"></span>
+                    Sequoia Service — All rights
+                    reserved.</p>
+            </div>
         </div>
     </section>
 
@@ -201,6 +188,9 @@
             easing: 'ease-out-cubic',
             delay: 100
         });
+
+        // Dynamic Year in Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
         // Header background change on scroll
         const header = document.getElementById('header');
